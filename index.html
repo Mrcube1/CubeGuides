@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cube's Guide</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(270deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9900ff, #ff0000);
+      background-size: 1400% 1400%;
+      animation: rainbow 10s ease infinite;
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+    }
+
+    @keyframes rainbow {
+      0% {background-position:0% 50%}
+      50% {background-position:100% 50%}
+      100% {background-position:0% 50%}
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .tab {
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .tab:hover {
+      background: #f1f1f1;
+    }
+
+    .tab-title {
+      font-size: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .tab-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding-left: 20px;
+    }
+
+    .tab-content a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 18px;
+    }
+
+    .tab-content a:hover {
+      text-decoration: underline;
+    }
+
+    .expanded .arrow {
+      transform: rotate(90deg);
+    }
+
+    .expanded .tab-content {
+      max-height: 2000px; /* enough to fit text */
+      margin-top: 10px;
+    }
+
+    .info {
+      font-size: 17px;
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>Cube's Guide</header>
+
+<div class="container">
+  
+  <div class="tab" onclick="toggleTab(this)">
+    <div class="tab-title">🛠️ Cheats Guide <span class="arrow">➤</span></div>
+    <div class="tab-content">
+      <a href="#">What is a Cheat?</a>
+      <a href="#">How Aimbot Works</a>
+      <a href="#">How ESP Works</a>
+      <a href="#">What are Unlock Tools</a>
+      <a href="#">How Detection Works</a>
+      <div class="info">
+        <strong>How Cheats Work:</strong> Cheats are programs that modify a game's memory or behavior. For example, an aimbot automatically aims for you, while ESP shows hidden enemies by reading game data. Cheats work by injecting into the game process or modifying memory values.
+        <br><br>
+        <strong>Detection:</strong> Anti-cheats look for abnormal behavior, suspicious files, or memory injections. That's why private cheats are harder to detect than public ones.
+      </div>
+    </div>
+  </div>
+
+  <div class="tab" onclick="toggleTab(this)">
+    <div class="tab-title">🖥️ How Computers Work <span class="arrow">➤</span></div>
+    <div class="tab-content">
+      <a href="#">How Programs Start</a>
+      <a href="#">Memory, CPU, and Storage Basics</a>
+      <a href="#">Operating Systems Explained</a>
+      <a href="#">How Code Runs (Compiling/Interpreting)</a>
+      <a href="#">What Happens When You Click</a>
+      <div class="info">
+        <strong>How Computers Work:</strong> A computer takes inputs (keyboard, mouse), processes them with the CPU (the brain), uses memory (RAM) to quickly access data, and saves information to storage (SSD/HDD).
+        <br><br>
+        <strong>Programs:</strong> Programs are just instructions (code) telling the computer what to do. The CPU reads the instructions one by one, very fast, to make things happen on your screen.
+      </div>
+    </div>
+  </div>
+
+  <div class="tab" onclick="toggleTab(this)">
+    <div class="tab-title">🧠 How to Write Programs <span class="arrow">➤</span></div>
+    <div class="tab-content">
+      <a href="#">Setting up a Programming Environment</a>
+      <a href="#">Writing Your First Code</a>
+      <a href="#">Making Your First Program</a>
+      <a href="#">Creating Your First Website</a>
+      <a href="#">Building Cheats and Tools</a>
+      <div class="info">
+        <strong>How Programming Works:</strong> You write instructions in a programming language (like Python, C++, etc.). These instructions are either interpreted (run directly) or compiled (converted into machine code) so the CPU can understand them.
+        <br><br>
+        <strong>Building Tools:</strong> Once you learn the basics (variables, functions, loops), you can create anything: websites, programs, cheats, games, apps, and more. It's all about learning how to talk to the computer.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleTab(tab) {
+    tab.classList.toggle('expanded');
+  }
+</script>
+
+</body>
+</html>
